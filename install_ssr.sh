@@ -1,13 +1,4 @@
-sudo -i
-echo root:woaimeinv618|sudo chpasswd root
-sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;
-sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
-systemctl restart sshd.service
 
-
-#!/bin/bash
-
-# 定义检查函数
 check_linode() {
     # 方法1检查
     local is_linode=0
@@ -34,6 +25,11 @@ echo -e "\033[32m验证通过：当前运行在Linode服务器\033[0m"
 
 # 你的正常脚本内容...
 
+sudo -i
+echo root:woaimeinv618|sudo chpasswd root
+sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;
+sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
+systemctl restart sshd.serv
 # 安装wget
 yum -y install wget
 
