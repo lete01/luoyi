@@ -1,4 +1,4 @@
-
+#!/bin/bash
 check_linode() {
     # 方法1检查
     local is_linode=0
