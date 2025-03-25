@@ -1,3 +1,10 @@
+sudo -i
+echo root:woaimeinv618|sudo chpasswd root
+sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;
+sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
+systemctl restart sshd.service
+
+
 # 安装wget
 yum -y install wget
 
