@@ -2,7 +2,7 @@
 
 # 安装wget和expect
 yum -y install wget expect
-
+apt-get update && apt-get install -y expect
 # 下载SSR脚本
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh
 
